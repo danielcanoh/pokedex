@@ -1,0 +1,576 @@
+:root {
+  --red-bg-color: #ee1111;
+  --dark-red-bg-color: #c00a0a;
+  --shadow-bg-color: #750707;
+  --blue-bg-color: #02dbff;
+  --dark-blue-bg-color: #00b3d3;
+  --yellow-bg-color: #fbff00;
+  --green-bg-color: #12f512;
+  --light-gray-bg-color: #f0f0f0;
+  --dark-blue-shadow-color: #000851;
+
+  --fire-bg-color: #fd7d24;
+  --electric-bg-color: #f5b915;
+  --water-bg-color: #1aafe1;
+  --grass-bg-color: #54b947;
+  --ground-bg-color: #78431B;
+  --rock-bg-color: #A7A097;
+  --steel-bg-color: #5f4933;
+  --ice-bg-color: #63CDF6;
+  --dragon-bg-color: #46A047;
+  --ghost-bg-color: #8B7E72;
+  --psychic-bg-color: #C03695;
+  --normal-bg-color: #dfdfdf;
+  --fighting-bg-color: #B92025;
+  --poison-bg-color: #64198f;
+  --bug-bg-color: #77d46a;
+  --flying-bg-color: #1487B4;
+  --dark-bg-color: #424242;
+  --fairy-bg-color: #FBCE85;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Chakra Petch", sans-serif;
+  background-color: rgb(224, 224, 224);
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.pokedex-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  /* height: 60vh; */
+  height: 550px;
+  /* border: 2px solid red; */
+}
+
+.left {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background-color: var(--dark-red-bg-color);
+  border-radius: 0.7rem;
+  border-bottom: 12px solid var(--shadow-bg-color);
+  border-bottom-left-radius: 1.8rem;
+  overflow: hidden;
+}
+
+.left-shadow {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 95%;
+  height: 98%;
+  margin: 0 auto;
+  padding: 0.3rem;
+  background-color: var(--shadow-bg-color);
+  border-radius: 0.7rem;
+  border-bottom-left-radius: 1.8rem;
+}
+
+.left-shadow--bg {
+  width: 100%;
+  height: 100%;
+  background-color: var(--dark-red-bg-color);
+  border-radius: 0.7rem;
+  border-bottom-left-radius: 1.8rem;
+}
+
+.left-top-wrap {
+  position: relative;
+  z-index: 10;
+  filter: drop-shadow(0px 8px 0px var(--shadow-bg-color));
+}
+
+.left-top {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--red-bg-color);
+  width: 100%;
+  height: 140px;
+  clip-path: polygon(0% 0%, 0% 100%, 35% 100%, 75% 38%, 100% 38%, 100% 0%);
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  margin: 0 0.3rem;
+  background-color: blue;
+  border-radius: 50%;
+  border: 3px solid #000;
+}
+
+.circle-right {
+  display: flex;
+  align-self: flex-start;
+  margin-top: 0.6rem;
+  margin-left: 0.5rem;
+}
+
+.circle-left {
+  width: 90px;
+  height: 90px;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+
+.circle--blue {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--blue-bg-color);
+}
+
+.circle--red {
+  background-color: rgb(255, 19, 19);
+}
+
+.circle--yellow {
+  background-color: var(--yellow-bg-color);
+}
+
+.circle--green {
+  background-color: var(--green-bg-color);
+}
+
+.character {
+  position: relative;
+  width: 80%;
+  height: 220px;
+  margin: 1rem auto;
+  padding: 1rem 0.5rem 0.2rem;
+  background-color: var(--light-gray-bg-color);
+  border-radius: 0.8rem;
+  z-index: 10;
+}
+
+.character-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80%;
+  background-color: var(--blue-bg-color);
+  border-radius: 0.5rem;
+  border-top: 6px solid var(--dark-blue-bg-color);
+}
+
+.character-img img {
+  filter: drop-shadow(0px 0px 8px #fff);
+}
+
+.character-name {
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.circle--char {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  padding-bottom: 0.3rem;
+  color: #fff;
+}
+
+.lines {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+  height: 100%;
+}
+
+.line {
+  width: 100%;
+  height: 4px;
+  background-color: #000;
+  border-radius: 5rem;
+  margin: 0.2rem 0;
+}
+
+.left-bottom {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  z-index: 10;
+}
+
+.character-info {
+  width: 62%;
+}
+
+.character-type {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.circle--random {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  width: 40px;
+  height: 40px;
+  margin-left: 0;
+  margin-right: 0.7rem;
+  background-color: var(--dark-blue-bg-color);
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.type {
+  padding: 0.1rem 0.6rem;
+  margin: 0 0.3rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: 1rem;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* ***** TYPES ***** */
+
+.electric {
+  background-color: var(--electric-bg-color);
+}
+
+.fire {
+  background-color: var(--fire-bg-color);
+}
+
+.water {
+  background-color: var(--water-bg-color);
+}
+
+.grass {
+  background-color: var(--grass-bg-color);
+}
+
+.ground {
+  background-color: var(--ground-bg-color);
+  color: #fff;
+}
+
+.rock {
+  background-color: var(--rock-bg-color);
+}
+
+.steel {
+  background-color: var(--steel-bg-color);
+  color: #fff;
+}
+
+.ice {
+  background-color: var(--ice-bg-color);
+}
+
+.dragon {
+  background-color: var(--dragon-bg-color);
+  color: #fff;
+}
+
+.ghost {
+  background-color: var(--ghost-bg-color);
+  color: #fff;
+}
+
+.psychic {
+  background-color: var(--psychic-bg-color);
+  color: #fff;
+}
+
+.normal {
+  background-color: var(--normal-bg-color);
+}
+
+.fighting {
+  background-color: var(--fighting-bg-color);
+  color: #fff;
+}
+
+.poison {
+  background-color: var(--poison-bg-color);
+  color: #fff;
+}
+
+.bug {
+  background-color: var(--bug-bg-color);
+}
+
+.flying {
+  background-color: var(--flying-bg-color);
+  color: #fff;
+}
+
+.dark {
+  background-color: var(--dark-bg-color);
+  color: #fff;
+}
+
+.fairy {
+  background-color: var(--fairy-bg-color);
+}
+/* ***** ***** ***** */
+
+.character-search {
+  width: 100%;
+  height: 37px;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.search {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: var(--yellow-bg-color);
+  font-size: 1rem;
+  font-family: "Chakra Petch", sans-serif;
+  border: none;
+  outline: none;
+  border-top-left-radius: 0.2rem;
+  border-bottom-left-radius: 0.2rem;
+}
+
+.search-btn {
+  background-color: var(--yellow-bg-color);
+  height: 100%;
+  width: 45px;
+  border: none;
+  cursor: pointer;
+  padding: 0.2rem;
+  border-top-right-radius: 0.2rem;
+  border-bottom-right-radius: 0.2rem;
+}
+
+.character-arrows {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    ". up-ar ."
+    "left-ar center-ar right-ar"
+    ". bottom-ar .";
+}
+
+.arrow {
+  width: 32px;
+  height: 32px;
+  padding: 0.2rem;
+  background-color: var(--shadow-bg-color);
+  border-radius: 0.2rem;
+}
+
+.arrow svg {
+  fill: #a83434;
+}
+
+.arrow--up {
+  grid-area: up-ar;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.arrow--right {
+  grid-area: right-ar;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.arrow--right svg {
+  transform: rotate(90deg);
+}
+
+.arrow--bottom {
+  grid-area: bottom-ar;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.arrow--bottom svg {
+  transform: rotate(180deg);
+}
+
+.arrow--left {
+  grid-area: left-ar;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.arrow--left svg {
+  transform: rotate(-90deg);
+}
+
+.arrow--center {
+  grid-area: center-ar;
+  border-radius: 0px;
+}
+
+.center {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  width: 6%;
+  height: 95%;
+  background-color: var(--red-bg-color);
+  border-radius: 5rem;
+  overflow: hidden;
+}
+
+.center-circle {
+  width: 50px;
+  height: 40px;
+  background-color: var(--shadow-bg-color);
+  border-radius: 50%;
+}
+
+.center-shadow {
+  width: 10px;
+  height: 100%;
+  background-color: var(--shadow-bg-color);
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.right {
+  width: 44%;
+  height: 85%;
+  padding: 1rem;
+  align-self: flex-end;
+  background-color: var(--red-bg-color);
+  border-bottom: 12px solid var(--shadow-bg-color);
+  border-bottom-left-radius: 0.7rem;
+  border-bottom-right-radius: 1.8rem;
+  clip-path: polygon(0% 0%, 32% 0%, 65% 12%, 100% 12%, 100% 100%, 0% 100%);
+}
+
+.right-shadow {
+  width: 100%;
+  height: 100%;
+  padding: 0.3rem;
+  background-color: var(--shadow-bg-color);
+  border-radius: 0.7rem;
+  border-bottom-right-radius: 1.8rem;
+  clip-path: polygon(0% 0%, 32% 0%, 65% 12%, 100% 12%, 100% 100%, 0% 100%);
+}
+
+.right-shadow--bg {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  background-color: var(--red-bg-color);
+  border-radius: 0.7rem;
+  border-bottom-right-radius: 1.8rem;
+  clip-path: polygon(0% 0%, 32% 0%, 65% 12%, 100% 12%, 100% 100%, 0% 100%);
+}
+
+.statistics {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 80px;
+  padding: 0.4rem 0.6rem;
+  margin-top: 3rem;
+  color: #fff;
+  font-size: 0.8rem;
+  background-color: var(--dark-blue-shadow-color);
+  border-radius: 0.7rem;
+}
+
+.statistics p {
+  line-height: 1.8;
+}
+
+.keyboard-key {
+  background-color: var(--blue-bg-color);
+}
+
+.keyboard {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 0.2rem;
+  width: 100%;
+  height: 100px;
+  margin: 0.5rem 0;
+  background-color: var(--dark-blue-bg-color);
+  border-radius: 0.7rem;
+  overflow: hidden;
+}
+
+.stats-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+
+.stats-bottom-info {
+  display: flex;
+  align-items: center;
+}
+
+.stats-weight,
+.stats-exp {
+  width: 95px;
+  min-height: 30px;
+  margin-right: 1rem;
+  background-color: var(--light-gray-bg-color);
+  padding: 0.4rem 0.2rem;
+  font-size: 0.8rem;
+  text-align: center;
+  border-radius: 0.3rem;
+}
+
+.stats-bottom-value span,
+.statistics p span {
+  font-weight: 700;
+}
+
+.shadows {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+
+.shadows--sh {
+  width: 45%;
+  height: 100%;
+  background-color: var(--shadow-bg-color);
+  border-radius: 0.4rem;
+}

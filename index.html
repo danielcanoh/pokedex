@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./assets/img/favicon.svg" type="image/x-icon">
+  <title>Pokedex</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Chakra+Petch&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+  <h1>Pokedex</h1>
+  <article class="pokedex-container">
+    <section class="left">
+      <div class="left-top-wrap">
+        <article class="left-top">
+          <div class="circle-left">
+            <div class="circle circle--blue"></div>
+          </div>
+          <div class="circle-right">
+            <div class="circle circle--red"></div>
+            <div class="circle circle--yellow"></div>
+            <div class="circle circle--green"></div>
+          </div>
+        </article>
+      </div>
+      <article class="character">
+        <figure class="character-img">
+          <img class="pokemon-img" src="" alt="" width="150">
+        </figure>
+        <div class="character-name">
+          <div class="circle circle--char circle--red">+</div>
+          <h2 class="pokemon-name"></h2>
+          <div class="lines">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </div>
+      </article>
+      <article class="left-bottom">
+        <section class="character-info">
+          <div class="character-type">
+            <button class="circle circle--random">
+              <?xml version="1.0" encoding="utf-8"?>
+
+              <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+              <svg width="20px" height="20px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path fill="#fff"
+                  d="M13 12h-2c-1 0-1.7-1.2-2.4-2.7-0.3 0.7-0.6 1.5-1 2.3 0.8 1.4 1.8 2.4 3.4 2.4h2v2l3-3-3-3v2z">
+                </path>
+                <path fill="#fff"
+                  d="M5.4 6.6c0.3-0.7 0.6-1.5 1-2.2-0.8-1.4-1.9-2.4-3.4-2.4h-3v2h3c1 0 1.7 1.2 2.4 2.6z"></path>
+                <path fill="#fff"
+                  d="M16 3l-3-3v2h-2c-2.7 0-3.9 3-5 5.7-0.8 2.1-1.7 4.3-3 4.3h-3v2h3c2.6 0 3.8-2.8 4.9-5.6 0.9-2.2 1.8-4.4 3.1-4.4h2v2l3-3z">
+                </path>
+              </svg>
+
+            </button>
+            <!-- <p class="type electric">electric</p> -->
+            <!-- <p class="type grass">grass</p> -->
+          </div>
+          <div class="character-search">
+            <input class="search" type="text" name="" id="" placeholder="Search a Pokemon">
+            <button class="search-btn">
+              <img src="./assets/img/favicon.svg" alt="Search">
+            </button>
+          </div>
+        </section>
+        <section class="character-arrows">
+          <div class="arrow arrow--up">
+            <?xml version="1.0" encoding="iso-8859-1"?>
+            <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 330.002 330.002"
+              style="enable-background:new 0 0 330.002 330.002;" xml:space="preserve">
+              <path id="XMLID_21_" d="M324.371,213.287l-150.004-120c-5.479-4.382-13.262-4.381-18.741,0.001l-149.996,120
+  c-4.974,3.979-6.893,10.667-4.784,16.678c2.108,6.011,7.784,10.035,14.154,10.035h300c6.371,0,12.046-4.024,14.154-10.035
+  C331.264,223.954,329.346,217.267,324.371,213.287z" />
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+            </svg>
+          </div>
+          <div class="arrow arrow--right">
+            <?xml version="1.0" encoding="iso-8859-1"?>
+            <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 330.002 330.002"
+              style="enable-background:new 0 0 330.002 330.002;" xml:space="preserve">
+              <path id="XMLID_21_" d="M324.371,213.287l-150.004-120c-5.479-4.382-13.262-4.381-18.741,0.001l-149.996,120
+  c-4.974,3.979-6.893,10.667-4.784,16.678c2.108,6.011,7.784,10.035,14.154,10.035h300c6.371,0,12.046-4.024,14.154-10.035
+  C331.264,223.954,329.346,217.267,324.371,213.287z" />
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+            </svg>
+          </div>
+          <div class="arrow arrow--center"></div>
+          <div class="arrow arrow--bottom">
+            <?xml version="1.0" encoding="iso-8859-1"?>
+            <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 330.002 330.002"
+              style="enable-background:new 0 0 330.002 330.002;" xml:space="preserve">
+              <path id="XMLID_21_" d="M324.371,213.287l-150.004-120c-5.479-4.382-13.262-4.381-18.741,0.001l-149.996,120
+  c-4.974,3.979-6.893,10.667-4.784,16.678c2.108,6.011,7.784,10.035,14.154,10.035h300c6.371,0,12.046-4.024,14.154-10.035
+  C331.264,223.954,329.346,217.267,324.371,213.287z" />
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+            </svg>
+          </div>
+          <div class="arrow arrow--left">
+            <?xml version="1.0" encoding="iso-8859-1"?>
+            <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 330.002 330.002"
+              style="enable-background:new 0 0 330.002 330.002;" xml:space="preserve">
+              <path id="XMLID_21_" d="M324.371,213.287l-150.004-120c-5.479-4.382-13.262-4.381-18.741,0.001l-149.996,120
+  c-4.974,3.979-6.893,10.667-4.784,16.678c2.108,6.011,7.784,10.035,14.154,10.035h300c6.371,0,12.046-4.024,14.154-10.035
+  C331.264,223.954,329.346,217.267,324.371,213.287z" />
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+            </svg>
+          </div>
+        </section>
+      </article>
+      <div class="left-shadow">
+        <div class="left-shadow--bg">
+        </div>
+      </div>
+    </section>
+    <div class="center">
+      <div class="center-circle"></div>
+      <div class="center-shadow"></div>
+    </div>
+    <section class="right">
+      <div class="right-shadow">
+        <div class="right-shadow--bg">
+          <article class="statistics">
+            <div class="statistics-left">
+              <!-- <p>hp: 45</p>
+              <p>attack: 49</p>
+              <p>defense: 49</p> -->
+            </div>
+            <div class="statistics-right">
+              <!-- <p>special-attack: 45</p>
+              <p>special-defense: 49</p>
+              <p>speed: 49</p> -->
+            </div>
+          </article>
+          <div class="keyboard">
+            <div class="keyboard-key"></div>
+            <div class="keyboard-key"></div>
+            <div class="keyboard-key"></div>
+            <div class="keyboard-key"></div>
+            <div class="keyboard-key"></div>
+            <div class="keyboard-key"></div>
+            <div class="keyboard-key"></div>
+            <div class="keyboard-key"></div>
+            <div class="keyboard-key"></div>
+            <div class="keyboard-key"></div>
+          </div>
+          <article class="stats-bottom">
+            <div class="stats-bottom-info">
+              <div class="stats-weight"></div>
+              <div class="stats-exp"></div>
+            </div>
+            <div class="circle circle--yellow"></div>
+          </article>
+          <div class="shadows">
+            <div class="shadows--sh"></div>
+            <div class="shadows--sh"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
