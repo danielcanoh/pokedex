@@ -70,8 +70,12 @@ const getPokemonByName = async function (name) {
   }
 };
 
+const formatName = function(name) {
+  return name.toLowerCase().replaceAll(' ', '-');
+}
+
 const searchPokemon = function () {
-  const charName = searchBar.value;
+  const charName = formatName(searchBar.value);
   getPokemonByName(charName);
 };
 
