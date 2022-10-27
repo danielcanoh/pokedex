@@ -13,11 +13,11 @@ const statsWeightEl = document.querySelector(".stats-weight");
 const statsExpEl = document.querySelector(".stats-exp");
 
 const deletePokemonInfo = function () {
-  const type = pokemonInfo.querySelector(".type");
+  const type = pokemonInfo.querySelectorAll(".type");
   const stats = statsEl.querySelectorAll("p");
   const statsBottom = statsBottomEl.querySelectorAll(".stats-bottom-value");
 
-  if (type) type.remove();
+  if (type) type.forEach(el => el.remove());
   if (stats && statsBottom) {
     stats.forEach((el) => el.remove());
     statsBottom.forEach((el) => el.remove());
@@ -27,9 +27,13 @@ const deletePokemonInfo = function () {
 };
 
 const renderPokemonInfo = function (data) {
-  const html = `
-    <p class="type ${data.types[0].type.name}">${data.types[0].type.name}</p>
+  let html = "";
+  data.types.forEach((el) => {
+    html += `
+    <p class="type ${el.type.name}">${el.type.name}</p>
   `;
+  });
+
   const statsLeft = `
     <p>hp: <span>${data.stats[0].base_stat}</span></p>
     <p>attack: <span>${data.stats[1].base_stat}</span></p>
@@ -70,9 +74,9 @@ const getPokemonByName = async function (name) {
   }
 };
 
-const formatName = function(name) {
-  return name.toLowerCase().replaceAll(' ', '-');
-}
+const formatName = function (name) {
+  return name.toLowerCase().replaceAll(" ", "-");
+};
 
 const searchPokemon = function () {
   const charName = formatName(searchBar.value);
